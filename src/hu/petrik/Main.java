@@ -29,9 +29,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        bejegyzesList.add(new Bejegyzes("Erdődi Fülöp", "Üres"));
-        bejegyzesList.add(new Bejegyzes("Nem Fülöp", "Nem Üres"));
+    private static void UI(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Hány bejegyzést kíván hozzáadni a listához? ");
         int darab = sc.nextInt();
@@ -45,6 +43,16 @@ public class Main {
             String tartalom = sc.next();
             bejegyzesList.add(new Bejegyzes(szerzo, tartalom));
         }
+    }
+
+    private static void init(){
+        bejegyzesList.add(new Bejegyzes("Erdődi Fülöp", "Üres"));
+        bejegyzesList.add(new Bejegyzes("Nem Fülöp", "Nem Üres"));
+        UI();
         fajlbeolvasas("bejegyzesek.txt");
+    }
+
+    public static void main(String[] args) {
+        init();
     }
 }
