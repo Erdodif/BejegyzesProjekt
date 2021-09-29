@@ -48,9 +48,9 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        String szerkesztvevolt = (szerkesztve == letrejott) ? ("Szerkesztve: " + szerkesztve) : "";
+        String szerkesztveVolt = szerkesztve.equals(letrejott) ? ("Szerkesztve: " + szerkesztve) : "";
         return szerzo + " - " + likeok + " - " + letrejott + '\n' +
-                szerkesztvevolt + '\n' +
+                szerkesztveVolt + '\n' +
                 tartalom;
     }
 }

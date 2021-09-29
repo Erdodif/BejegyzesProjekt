@@ -12,7 +12,7 @@ public class Main {
 
     public static List<Bejegyzes> bejegyzesList = new ArrayList();
 
-    private static void fajlbeolvasas(String eleres) {
+    private static void fajlBeolvasas(String eleres) {
         try {
             FileReader rd = new FileReader(eleres);
             BufferedReader br = new BufferedReader(rd);
@@ -29,7 +29,7 @@ public class Main {
         }
     }
 
-    private static void UI(){
+    private static void felhasznaloiBekeres(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Hány bejegyzést kíván hozzáadni a listához? ");
         int darab = sc.nextInt();
@@ -45,11 +45,16 @@ public class Main {
         }
     }
 
+    private static void felhasznaloiModositas(int index){
+
+    }
+
     private static void init(){
         bejegyzesList.add(new Bejegyzes("Erdődi Fülöp", "Üres"));
         bejegyzesList.add(new Bejegyzes("Nem Fülöp", "Nem Üres"));
-        UI();
-        fajlbeolvasas("bejegyzesek.txt");
+        felhasznaloiBekeres();
+        fajlBeolvasas("bejegyzesek.txt");
+        felhasznaloiModositas(2);
     }
 
     public static void main(String[] args) {
