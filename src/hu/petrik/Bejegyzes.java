@@ -48,8 +48,11 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        String szerkesztveVolt = szerkesztve.equals(letrejott) ? ("Szerkesztve: " + szerkesztve) : "";
-        return szerzo + " - " + likeok + " - " + letrejott + '\n' +
+        String szerkesztveVolt = "";
+        if (!szerkesztve.equals(letrejott)){
+            szerkesztveVolt ="\nSzerkesztve: " + szerkesztve;
+        }
+        return szerzo + " - " + likeok + " - " + letrejott +
                 szerkesztveVolt + '\n' +
                 tartalom;
     }
