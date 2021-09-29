@@ -9,7 +9,7 @@ public class Bejegyzes {
     private LocalDateTime letrejott;
     private LocalDateTime szerkesztve;
 
-    public Bejegyzes(String szerzo, String tartalom){
+    public Bejegyzes(String szerzo, String tartalom) {
         letrejott = LocalDateTime.now();
         this.szerzo = szerzo;
         this.tartalom = tartalom;
@@ -42,15 +42,15 @@ public class Bejegyzes {
         return szerkesztve;
     }
 
-    public void like(){
+    public void like() {
         this.likeok++;
     }
 
     @Override
     public String toString() {
-        String szerkesztvevolt = (szerkesztve == letrejott) ? ("Szerkesztve: " + szerkesztve): "";
-        return szerzo + " - " + likeok + " - " + letrejott +'\n'+
-                szerkesztvevolt +'\n'+
+        String szerkesztvevolt = (szerkesztve == letrejott) ? ("Szerkesztve: " + szerkesztve) : "";
+        return szerzo + " - " + likeok + " - " + letrejott + '\n' +
+                szerkesztvevolt + '\n' +
                 tartalom;
     }
 }
